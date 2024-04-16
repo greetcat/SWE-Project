@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Portal</title>
+</head>
+<body>
+    <h1>Welcome to Supervisor Portal</h1>
+    <p>This is the portal for supervisors.</p>
+
+<!-- Form to update available manpower and resources -->
+<form action="/supervisor_dashboard" method="post">
+    <label for="available_manpower">Available Manpower:</label>
+    <input type="number" id="available_manpower" name="available_manpower" value="{{ available_manpower }}" required>
+    <br>
+    <label for="available_resources">Available Resources:</label>
+    <input type="number" id="available_resources" name="available_resources" value="{{ available_resources }}" required>
+    <br>
+    <input type="submit" value="Update">
+</form>
+
+
+    <!-- Form to change the priority of jobs -->
+    <form action="/supervisor_dashboard" method="post">
+        <table>
+            <tr>
+                <th>Complaint</th>
+                <th>Priority</th>
+            </tr>
+            {% for complaint in complaints %}
+            <tr>
+                <td>{{ complaint.complaint }}</td>
+                <td>
+                    <select name="priority_{{ loop.index }}">
+                        {% for priority in range(11) %}
+                        <option value="{{ priority }}" {% if complaint.priority == priority %} selected {% endif %}>{{ priority }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Update Priorities">
+    </form>
+</body>
+</html>

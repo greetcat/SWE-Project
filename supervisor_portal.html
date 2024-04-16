@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Portal</title>
+</head>
+<body>
+    <h1>Supervisor Portal</h1>
+    <form action="/supervisor_portal" method="post">
+        <label for="available_manpower">Available Manpower:</label><br>
+        <input type="number" id="available_manpower" name="available_manpower" value="{{ available_manpower }}"><br>
+        <label for="available_resources">Available Resources:</label><br>
+        <input type="number" id="available_resources" name="available_resources" value="{{ available_resources }}"><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

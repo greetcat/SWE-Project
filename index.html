@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRTS - Road Repair Tracking System</title>
+    <style>
+        nav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .login-container {
+            float: right;
+            padding: 14px 16px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        <div class="login-container">
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </nav>
+    <h1>Welcome to RRTS - Road Repair Tracking System</h1>
+    <p>This system helps track and manage road repair complaints efficiently.</p>
+    <h2>Submit a Complaint</h2>
+    <form action="/submit_complaint" method="post">
+        <label for="complaint">Complaint:</label><br>
+        <input type="text" id="complaint" name="complaint" required><br>
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" required><br>
+        <input type="submit" value="Submit Complaint">
+    </form>
+</body>
+</html>
