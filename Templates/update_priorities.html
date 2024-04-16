@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Priorities</title>
+</head>
+<body>
+    <h1>Update Complaint Priorities</h1>
+    <form action="/update_priorities" method="post">
+        <ul>
+            {% for complaint in complaints %}
+            <li>
+                {{ complaint.complaint_text }} - {{ complaint.city }} - Current Priority: {{ complaint.priority }}
+                <input type="hidden" name="complaint_index" value="{{ loop.index }}">
+                <label for="priority">New Priority:</label>
+                <input type="number" id="priority" name="priority" min="0" value="{{ complaint.priority }}" required>
+            </li>
+            {% endfor %}
+        </ul>
+        <input type="submit" value="Update Priorities">
+    </form>
+</body>
+</html>

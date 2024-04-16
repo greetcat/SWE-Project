@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"][readonly] {
+            background-color: #f2f2f2;
+        }
+    </style>
+        <style>
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        /* Navigation styles */
+        nav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .login-container {
+            float: right
+        }
+        .login-container .fr{
+            display:flex;
+            flex-direction:row;
+            }
+        .fr .lb{
+            width:100px;
+            margin-left:25px;
+            color:white;
+            }
+        /* Page content styles */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 10px;
+            color: #555;
+            font-weight: bold; /* Make labels bold */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 8px; /* Reduce padding */
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px; /* Reduce font size */
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        p {
+            color: #555;
+        }
+
+        /* Make text of username and password fields contrasting */
+        #username, #password {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/contact">Contact</a></li> <!-- Added contact link -->
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Contact</h1>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="Gokul" readonly>
+            <label for="roll">Roll No:</label>
+            <input type="text" id="roll" name="roll" value="121CS0131" readonly>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" value="Software Engineering Lab" readonly>
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic" value="Road Repair and Tracking System" readonly>
+            <p><strong>Journey:</strong>
+                This being my first ever development project , I was able to learn the very basics of HTML and CSS to complete this project.
+                It was quite a challenge to learn languages in such short notice but I was faced it and used the help of my friends along the way.
+                Although it might not be a great looking website I am happy with the project considering that from start to finish its all my Idea,effort and not at all influenced by anyone or anything. </p>
+        </form>
+    </div>
+</body>
+</html>
